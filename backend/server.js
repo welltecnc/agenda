@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+server.listen(port, '0.0.0.0', () =>{});
 
 // Configuração do Banco de Dados MySQL (MOCK/Exemplo)
 const dbConfig = {
