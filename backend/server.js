@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3000;
-server.listen(port, '0.0.0.0', () =>{});
+
 
 // Configuração do Banco de Dados MySQL (MOCK/Exemplo)
 const dbConfig = {
@@ -148,6 +148,6 @@ app.delete('/api/appointments/:id', async (req, res) => {
 
 
 // --- Inicialização do Servidor ---
-app.listen(port, () => {
-  console.log(`Servidor Node.js rodando em http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });
